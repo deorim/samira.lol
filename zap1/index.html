@@ -74,8 +74,9 @@ var back_redirect_back_link = './t2'+location.search;history.pushState({},"",loc
                 <script type="text/javascript" id="scr_65e35e4824757e00085564b6">var s=document.createElement("script");s.src="https://scripts.converteai.net/7e8d8da4-4ab6-458e-b000-3cf685c055a9/ab-test/65e35e4824757e00085564b6/player.js",s.async=!0,document.head.appendChild(s);</script>
 
                               <!-- Botão 1 -->
-            <div id="cta1" class="mt-4 d-none">
-              <a id="cta-button-1" href="https://wa.me/5535997660759&" class="a-btn" style="text-decoration: green;">
+
+            <div id="whatsappButton" class="mt-4 d-none">
+              <a id="whatsappButton" href="https://api.whatsapp.com/send?phone=+5535997660759&text=Olá" class="a-btn" style="text-decoration: green;">
                 <span class="span-btn">VOCÊ ACABOU DE GANHAR UM MEGA DESCONTO!  CLIQUE AQUI</span>
                 <span class="span-btn2">(ATENÇÃO: As Vagas se encerram em 15 minutos, restam apenas 03 vagas)</span>
               </a>
@@ -85,6 +86,30 @@ var back_redirect_back_link = './t2'+location.search;history.pushState({},"",loc
         </div>
       </div>
     </header>
+
+    <script>
+    // Função para obter parâmetros da URL
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    // Obter o valor de UTM_source da URL
+    var utmSource = getParameterByName('utm_source');
+
+    // Adicionar UTM_source ao link do botão do WhatsApp
+    var whatsappButton = document.getElementById('whatsappButton');
+    if (whatsappButton && utmSource) {
+        var whatsappLink = whatsappButton.getAttribute('href');
+        whatsappButton.setAttribute('href', whatsappLink + '&utm_source=' + utmSource);
+    }
+</script>
+
 
 
     <section class="comments py-4">
