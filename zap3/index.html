@@ -11,24 +11,17 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '3091465557780774');
+fbq('init', '1341513146563529');
 fbq('track', 'PageView');
-</script>
+fbq('track', 'InitiateCheckout');
+fbq('track', 'Purchase', {value: 1.00, currency: 'BRL'});
+    </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3091465557780774&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1341513146563529&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1341513146563529&ev=InitiateCheckout&noscript=1"
+src="https://www.facebook.com/tr?id=1341513146563529&ev=Purchase&noscript=1"
 /></noscript>
 <!-- fim- pixel -->
-
-<!-- evento compra -->
-    <script>
-        document.getElementById('whatsappLink').addEventListener('click', function() {
-            fbq('track', 'Purchase', {
-                value: 1.00,  // Substitua pelo valor da compra
-                currency: 'BRL' // Substitua pela moeda da compra
-            });
-        });
-    </script>
-    <!-- fim - evento compra -->
 
 <head>
 <meta charset="UTF-8">
@@ -53,12 +46,12 @@ src="https://www.facebook.com/tr?id=3091465557780774&ev=PageView&noscript=1"
         // Texto padrão para a mensagem no WhatsApp
         var textoWhatsapp = "ATENÇÃO NÃO APAGAR - Você Acaba de Ganhar uma Consulta Totalmente Grátis- Protocolo nº";
         
-        // Obter o valor de UTM_source da URL
-        var utmSource = getParameterByName('utm_source');
+        // Obter o valor de UTM_campaign da URL
+        var utmCampaign = getParameterByName('utm_campaign');
         
-        // Adicionar UTM_source à mensagem do WhatsApp
-        if (utmSource) {
-            textoWhatsapp += "%0A" + utmSource;
+        // Adicionar UTM_campaign à mensagem do WhatsApp
+        if (utmCampaign) {
+            textoWhatsapp += "%0A" + utmCampaign;
         }
         
         // Montar a URL do link do WhatsApp
