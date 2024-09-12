@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poder da Oração</title>
+
+  <!-- Meta tags Open Graph corrigidas -->
+  <meta property="og:url" content="https://samira.lol/q1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Poder da Oração">
+  <meta property="og:description" content="Transforme sua vida com o poder da oração. Descubra orações que trazem resultados!">
+  <meta property="og:image" content="https://samira.lol/q1/logo.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    .page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 500px;
+    }
+    .logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #000;
+      margin: 20px 0;
+    }
+    h2 {
+      font-size: 24px;
+      color: #b8860b;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .headline {
+            font-size: 2.5em;
+            color: #b8860b;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    .btn, .btn2 {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background-color: #006400;
+    }
+    .btn:hover {
+      background-color: #004d00;
+    }
+    .btn2 {
+      background-color: #ff0000;
+    }
+    .btn2:hover {
+      background-color: #cc0000;
+    }
+    .progress-bar {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .progress {
+      height: 8px;
+      background-color: #4CAF50;
+      border-radius: 5px;
+      width: 0; /* Inicializado a 0 */
+      transition: width 0.4s ease;
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .btn, .btn2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+  <script>
+    function nextPage(pageId, progressWidth) {
+      document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.add('hidden');
+      });
+      document.getElementById(pageId).classList.remove('hidden');
+      if (progressWidth) {
+        document.querySelector('.progress').style.width = progressWidth;
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Página 1 - Introdução -->
+  <div class="page" id="page1">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Poder da Oração">
+      </div>
+      <br>
+      <div class="headline">JESUS MORREU POR VOCÊ, NÃO IGNORE SUA MENSAGEM</div>
+      <h1>Quer aprender a orar de maneira que suas orações sejam atendidas?</h1>
+      <br>
+      <p>"E tudo o que pedirem em oração, se crerem, vocês receberão." - Mateus 21:22</p>
+      <button class="btn" onclick="nextPage('page2', null)">Sim, eu preciso dessa transformação!</button>
+      <br>
+      <br>
+      <br>
+      <button class="btn2" onclick="nextPage('page2', null)">Não, eu não preciso de DEUS</button>
+    </div>
+  </div>
+
+  <!-- Página 2 -->
+  <div class="page hidden" id="page2">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Poder da Oração">
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 10%;"></div>
+      </div>
+      <h1>Gostaria de aprender a oração poderosa de 2 minutos que e transformar sua vida agora mesmo, ainda hoje?</h1>
+      <p>"Buscai primeiro o Reino de Deus, e todas essas coisas vos serão acrescentadas." (Mateus 6:33)</p>
+      <button class="btn" onclick="nextPage('page3', '10%')">Sim, eu quero saber mais!</button>
+    </div>
+  </div>
+
+
+<!-- Página 3 -->
+<div class="page hidden" id="page3">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 30%;"></div>
+        </div>
+        <h1>Você já orou e sentiu que suas orações não foram atendidas? Quer mudar isso a partir de hoje?</h1>
+        <p>"E tudo o que pedirdes em oração, crendo, o recebereis." (Mateus 21:22)</p>
+        <button class="btn" onclick="nextPage('page4', '30%')">Sim, eu quero mudar isso agora!</button>
+    </div>
+</div>
+
+<!-- Página 4 -->
+<div class="page hidden" id="page4">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 40%;"></div>
+        </div>
+        <h1>Gostaria de conhecer agora a oração secreta de 2 minutos que transformou a vida de Silvio Santos, saído de camelo a dono de TV?</h1>
+        <p>Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes que não sabes." (Jeremias 33:3)</p>
+        <button class="btn" onclick="nextPage('page5', '40%')">Sim, quero saber qual é essa oração!</button>
+    </div>
+</div>
+
+<!-- Página 5 -->
+<div class="page hidden" id="page5">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 50%;"></div>
+        </div>
+        <h1>Ana Castelo, cantora famosa, conseguiu ter grande sucesso após realizar esta oração, que todos podem fazer, quer aprender?</h1>
+        <p> "Eu sei os planos que tenho para você, diz o Senhor, planos de paz e não de mal, para lhe dar um futuro e uma esperança." (Jeremias 29:11)</p>
+        <button class="btn" onclick="nextPage('page6', '50%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 6 -->
+<div class="page hidden" id="page6">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 60%;"></div>
+        </div>
+        <h1>Antes que tirem esse site do ar, Quer ter acesso à essa oração SAGRADA usada a milhares de anos, mas de conhecimento de poucas pessoas?</h1>
+        <p>"Se pedirmos alguma coisa segundo a sua vontade, ele nos ouve." (1 João 5:14)</p>
+        <button class="btn" onclick="nextPage('page7', '60%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 7 -->
+<div class="page hidden" id="page7">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+        <h1>Conseguimos divulgar a oração para mais de 10 mil pessoas, que já transformaram suas vidas com esta oração, quer essa transformação?</h1>
+        <p>"Pedi, e dar-se-vos-á; buscai, e encontrareis; batei, e abrir-se-vos-á." (Mateus 7:7)</p>
+        <p>Depoimentos:</p>
+        </p>Ana Lúcia: “Minha vida mudou depois de fazer essa oração, consegui emprego na mesma semana!”.</p>
+        <br>
+        <p>Carlos: “Estava com problema sério de saúde, e os médicos nem acreditaram, no milagre que aconteceu!”</p>
+        <button class="btn" onclick="nextPage('page8', '70%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 8 -->
+<div class="page hidden" id="page8">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+        </div>
+        <h1>Gostaria de receber o manual "O Poder da Oração" grátis APENAS por ajudar a espalhar a palavra de Deus e começar sua transformação agora?</h1>
+        <p>"Ide por todo o mundo, pregai o evangelho" Marcos 16:15</p>
+        <button class="btn" onclick="nextPage('page9', '75%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 9 -->
+<div class="page hidden" id="page9">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+        </div>
+        <h1>Não perca a chance de transformar sua vida ainda hoje, Você realmente quer essa mudança em sua vida?</h1>
+        <p>"Crede no Senhor vosso Deus, e estareis seguros; crede nos seus profetas, e prosperareis." (2 Crônicas 20:20)</p>
+        <button class="btn" onclick="nextPage('page10', '80%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 10 -->
+<div class="page hidden" id="page10">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+        </div>
+        <h1>O manual “O Poder da Oração” somente é disponibilizado para pessoas realmente comprometidas para receber suas bênçãos, você se compromete?</h1>
+        <p>"Dai, e ser-vos-á dado; boa medida, recalcada, sacudida e transbordante vos deitarão no deleite." (Lucas 6:38)</p>
+        <button class="btn" onclick="nextPage('page11', '85%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 11 -->
+<div class="page hidden" id="page11">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+        </div>
+        <h1>Você acaba de ganhar também totalmente grátis o Guia de orações de 7 dias e a Oração Matinal Especial como presente por ajudar a divulgar a palavra de DEUS!</h1>
+        <p>"E qualquer coisa que lhe pedimos, dele a receberemos, porque guardamos os seus mandamentos e fazemos o que é agradável à sua vista." (1 João 3:22)</p>
+        <button class="btn" onclick="nextPage('page12', '90%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 12 -->
+<div class="page hidden" id="page12">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 95%;"></div>
+        </div>
+        <h1>Você está preparado para experimentar as bênçãos e mudanças que esta oração de 2 minutos vai trazer a sua vida?</h1>
+        <p>"O Senhor é meu pastor, nada me faltará." (Salmo 23:1)</p>
+        <button class="btn" onclick="nextPage('page13', '95%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 13 -->
+<div class="page hidden" id="page13">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Poder da Oração">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 97%;"></div>
+        </div>
+        <h1>Poderosos querem tirar o site do ar, Você quer garantir toda transformação ainda hoje, antes que esta este site saia do ar?</h1>
+        <p>"Crede no Senhor vosso Deus, e estareis seguros; crede nos seus profetas, e prosperareis." (2 Crônicas 20:20)</p>
+        <button class="btn" onclick="nextPage('page14', '97%')">Sim, eu quero começar agora!</button>
+    </div>
+</div>
+
+<!-- Página 14 - final - Compromisso com Oração -->
+<div class="page hidden" id="page14">
+    <div class="container">
+        <div class="logo" style="margin-top: 200px; padding-top: 20px; text-align: center;">
+            <img src="logo.png" alt="Poder da Oração" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 100%;"></div>
+        </div>
+        <h1>Ajude a espalhar a palavra de Deus pela terra, e receba agora em seu e-mail a Oração de 2 minutos, o manual “O Poder da Oração” e seus bônus.</h1><h2>Sua doação vai espalhar esta oração e abençoar milhares de pessoas. Faça parte desta missão!</h2>
+        <p>"Deus ama a quem dá com alegria." (2 Coríntios 9:7)</p>
+        <h2>ROLE PARA BAIXO PARA OUTROS VALORES!</h2>
+
+        <a href="https://link1.com" class="btn">Doar R$ 100 - Envia a palavra de DEUS para +1.000 pessoas</a>
+        
+        <a href="https://link2.com" class="btn">Doar R$ 50 - Envia a palavra de DEUS para +500 pessoas</a>
+        
+        <a href="https://link3.com" class="btn">Doar R$ 20 - Envia a palavra de DEUS para +200 pessoas</a>
+        
+        <a href="https://link3.com" class="btn">Doar R$ 10 - Envia a palavra de DEUS para +100 pessoas</a>
+        
+        <a href="https://link4.com" class="btn2">Não, EU não quero ajudar a divulgar a palavra de DEUS</a>
+    </div>
+</div>
+
+</body>
+</html>
