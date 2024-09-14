@@ -1,399 +1,362 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Poder da Oração</title>
-
-  <!-- Meta tags Open Graph corrigidas -->
-  <meta property="og:url" content="https://samira.lol">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Poder da Oração">
-  <meta property="og:description" content="Transforme sua vida com o poder da oração. Descubra orações que trazem resultados!">
-  <meta property="og:image" content="https://samira.lol/logo.png">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-    .page {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      width: 100%;
-      max-width: 500px;
-    }
-    .logo img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    h1 {
-      font-size: 24px;
-      color: #000;
-      margin: 20px 0;
-    }
-    h2 {
-      font-size: 24px;
-      color: #b8860b;
-      margin: 20px 0;
-    }
-    p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    .headline {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Poder da Oração</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            scroll-behavior: smooth;
+            background: url('./ceu3.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .headline {
             font-size: 2.5em;
-            color: #b8860b;
+            color: #ffd700;
             margin-bottom: 20px;
             font-weight: bold;
             text-transform: uppercase;
+        }        
+        .question {
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
-    .btn, .btn2 {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      font-size: 18px;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-bottom: 10px;
-    }
-    .btn {
-      background-color: #006400;
-    }
-    .btn:hover {
-      background-color: #004d00;
-    }
-    .btn2 {
-      background-color: #ff0000;
-    }
-    .btn2:hover {
-      background-color: #cc0000;
-    }
-    .progress-bar {
-      width: 100%;
-      background-color: #e0e0e0;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .progress {
-      height: 8px;
-      background-color: #4CAF50;
-      border-radius: 5px;
-      width: 0; /* Inicializado a 0 */
-      transition: width 0.4s ease;
-    }
-    .hidden {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 20px;
-      }
-      p {
-        font-size: 14px;
-      }
-      .btn, .btn2 {
-        font-size: 16px;
-      }
-    }
-  </style>
-  <script>
-    function nextPage(pageId, progressWidth) {
-      document.querySelectorAll('.page').forEach(function(page) {
-        page.classList.add('hidden');
-      });
-      document.getElementById(pageId).classList.remove('hidden');
-      if (progressWidth) {
-        document.querySelector('.progress').style.width = progressWidth;
-      }
-    }
-  </script>
-      <!-- Meta Pixel Code -->
+        .question2 {
+            font-size: 2em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+        .options button {
+            margin: 10px;
+            padding: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .options .btn-sim {
+            background-color: #28a745;
+            color: white;
+        }
+        .options .btn-nao {
+            background-color: #dc3545;
+            color: white;
+        }
+        .options button:hover {
+            opacity: 0.9;
+        }
+        .hidden {
+            display: none;
+        }
+        .bible-quote {
+            font-size: 1.2em;
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+    <!-- Código de pixel do Facebook -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1031293821743568');
-      fbq('init', '358249773628467');
-      fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1031293821743568');
+        fbq('init', '358249773628467');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1031293821743568&ev=PageView&noscript=1"
-      src="https://www.facebook.com/tr?id=358249773628467&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+src="https://www.facebook.com/tr?id=1031293821743568&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=358249773628467&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
-  <!-- Página 1 - Introdução -->
-  <div class="page" id="page1">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Poder da Oração">
-      </div>
-      <br>
-      <div class="headline">JESUS MORREU POR VOCÊ, NÃO IGNORE SUA MENSAGEM</div>
-      <h1>Quer aprender a orar de maneira que suas orações sejam atendidas?</h1>
-      <br>
-      <p>"Pedis e não recebeis, porque pedis mal." Tiago 4:3:</p>
-      <button class="btn" onclick="nextPage('page2', null)">Sim, eu quero!</button>
-      <br>
-      <br>
-      <br>
-      <button class="btn2" onclick="nextPage('page2', null)">Não, eu não preciso de DEUS</button>
-    </div>
-  </div>
 
-  <!-- Página 2 -->
-  <div class="page hidden" id="page2">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="Poder da Oração">
-      </div>
-      <div class="progress-bar">
-        <div class="progress" style="width: 10%;"></div>
-      </div>
-      <h1>Gostaria de aprender a oração poderosa de 1 minuto que e transformar sua vida agora mesmo, ainda hoje?</h1>
-      <p>"Buscai primeiro o Reino de Deus, e todas essas coisas vos serão acrescentadas." (Mateus 6:33)</p>
-      <button class="btn" onclick="nextPage('page3', '10%')">Sim, eu quero aprender!</button>
-    </div>
-  </div>
+    <!-- Pergunta 1 -->
+    <section id="pergunta1" class="section">
+        <div class="headline">JESUS MORREU POR TI, NÃO IGNORE A MENSAGEM QUE ELE TEM PRA VOCÊ</div>
+        <div class="question">Você acredita que Deus ouve cada uma das suas orações?</div>
+            <div class="options">
+            <button onclick="nextQuestion('pergunta2')" class="btn-sim">Sim</button>
+            <button onclick="nextQuestion('pergunta2')" class="btn-nao">Não</button>
+        </div>
+        <div class="bible-quote">"E tudo o que pedirem em oração, se crerem, vocês receberão." - Mateus 21:22</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta1'});</script>
+        </section>
 
+    <!-- Pergunta 2 -->
+    <section id="pergunta2" class="section hidden">
+        <div class="question">Você gostaria de saber a maneira CERTA de orar e alcançar suas bênçãos?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta3')" class="btn-sim">Sim, claro!</button>
+            <button onclick="nextQuestion('pergunta3')" class="btn-nao">Eu não preciso</button>
+        </div>
+       <div class="bible-quote">"Peçam, e lhes será dado; busquem, e encontrarão; batam, e a porta será aberta." - Mateus 7:7</div> 
+               <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta2'});</script>
+    </section>
 
-<!-- Página 3 -->
-<div class="page hidden" id="page3">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 3 -->
+    <section id="pergunta3" class="section hidden">
+        <div class="question">Você acredita que Deus pode mudar sua situação financeira?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta4')" class="btn-sim">Sim, eu creio!</button>
+            <button onclick="nextQuestion('pergunta4')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 30%;"></div>
-        </div>
-        <h1>Você já orou e sentiu que suas orações não foram atendidas? Quer mudar isso a partir de hoje?</h1>
-        <p>"E tudo o que pedirdes em oração, crendo, o recebereis." (Mateus 21:22)</p>
-        <button class="btn" onclick="nextPage('page4', '30%')">Sim, gostaria que minhas orações fossem ser atendidas!</button>
-    </div>
-</div>
+        <div class="bible-quote">"E o meu Deus suprirá todas as necessidades de vocês, de acordo com as suas gloriosas riquezas em Cristo Jesus." - Filipenses 4:19</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta3'});</script>
+    </section>
 
-<!-- Página 4 -->
-<div class="page hidden" id="page4">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 4 -->
+    <section id="pergunta4" class="section hidden">
+        <div class="question">Você gostaria de aprender a orar por sua saúde e receber cura?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta5')" class="btn-sim">Sim, desejo aprender!</button>
+            <button onclick="nextQuestion('pergunta5')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 40%;"></div>
-        </div>
-        <h1>Gostaria de conhecer agora a oração secreta de 1 minuto que transformou a vida de Silvio Santos, que saiu de camelo a dono de TV?</h1>
-        <p>Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes que não sabes." (Jeremias 33:3)</p>
-        <button class="btn" onclick="nextPage('page5', '40%')">Sim, eu preciso dessa oração!</button>
-    </div>
-</div>
+        <div class="bible-quote">"O Senhor o sustentará no leito da enfermidade; tu o restaurarás da sua cama de doença." - Salmos 41:3</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta4'});</script>
+    </section>
 
-<!-- Página 5 -->
-<div class="page hidden" id="page5">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 5 -->
+    <section id="pergunta5" class="section hidden">
+        <div class="question">Gostaria de saber como orar por sua família e fortalecer seus laços?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta6')" class="btn-sim">Sim, desejo orar pela minha família.</button>
+            <button onclick="nextQuestion('pergunta6')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 50%;"></div>
-        </div>
-        <h1>Ana Castelo, cantora famosa, conseguiu ter grande sucesso após realizar essa oração, que todos podem fazer, quer aprender?</h1>
-        <p> "Eu sei os planos que tenho para você, diz o Senhor, planos de paz e não de mal, para lhe dar um futuro e uma esperança." (Jeremias 29:11)</p>
-        <button class="btn" onclick="nextPage('page6', '50%')">Sim, eu quero aprender!</button>
-    </div>
-</div>
+        <div class="bible-quote">"Crê no Senhor Jesus, e serás salvo, tu e tua casa." - Atos 16:31</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta5'});</script>
+    </section>
 
-<!-- Página 6 -->
-<div class="page hidden" id="page6">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 6 -->
+    <section id="pergunta6" class="section hidden">
+        <div class="question">Você acredita que Deus pode transformar qualquer situação quando você ora com fé?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta7')" class="btn-sim">Sim, tenho fé!</button>
+            <button onclick="nextQuestion('pergunta7')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 60%;"></div>
-        </div>
-        <h1>Antes que tirem esse site do ar, Quer ter acesso à essa oração SAGRADA usada a milhares de anos, mas de conhecimento de poucas pessoas?</h1>
-        <p>"Se pedirmos alguma coisa segundo a sua vontade, ele nos ouve." (1 João 5:14)</p>
-        <button class="btn" onclick="nextPage('page7', '60%')">Sim, preciso que Deus ouça minhas orações!</button>
-    </div>
-</div>
+        <div class="bible-quote">"Tudo é possível ao que crê." - Marcos 9:23</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta6'});</script>
+    </section>
 
-<!-- Página 7 -->
-<div class="page hidden" id="page7">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 7 -->
+    <section id="pergunta7" class="section hidden">
+        <div class="question">Você gostaria de receber um guia completo para aprender a orar corretamente em todas as áreas da sua vida?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta8')" class="btn-sim">Sim, eu quero!</button>
+            <button onclick="nextQuestion('pergunta8')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 70%;"></div>
-        </div>
-        <h1>Divulgamos a oração para mais de 10 mil pessoas, que já transformaram suas vidas, você quer essa transformação?</h1>
-        <p>"Pedi, e dar-se-vos-á; buscai, e encontrareis; batei, e abrir-se-vos-á." (Mateus 7:7)</p>
-        <p>Depoimentos:</p>
-        </p>Ana Lúcia: “Minha vida mudou depois de fazer essa oração, consegui emprego na mesma semana!”.</p>
-        <br>
-        <p>Carlos: “Estava com problema sério de saúde, e os médicos nem acreditaram, no milagre que aconteceu!”</p>
-        <button class="btn" onclick="nextPage('page8', '70%')">Sim, eu também preciso dessa transformação!</button>
-    </div>
-</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta7'});</script>
+    </section>
 
-<!-- Página 8 -->
-<div class="page hidden" id="page8">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 8 -->
+    <section id="pergunta8" class="section hidden">
+        <div class="question">Imagine transformar sua vida com orações específicas para cada situação?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta9')" class="btn-sim">Sim, eu gostaria!</button>
+            <button onclick="nextQuestion('pergunta9')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 75%;"></div>
-        </div>
-        <h1>Gostaria de receber Grátis o manual "O Poder da Oração" APENAS por ajudar a divulgar a palavra de Deus e começar sua transformação agora?</h1>
-        <p>"Ide por todo o mundo, pregai o evangelho" Marcos 16:15</p>
-        <button class="btn" onclick="nextPage('page9', '75%')">Sim, eu quero muito!</button>
-    </div>
-</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta8'});</script>
+    </section>
 
-<!-- Página 9 -->
-<div class="page hidden" id="page9">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+    <!-- Pergunta 9 -->
+    <section id="pergunta9" class="section hidden">
+        <div class="question">Você acaba de Ganhar o manual<div class="question2">O Poder da Oração</div>no valor de R$ 147,00 com orações poderosas para cada área da sua vida. Quer receber agora em seu E-mail?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta10')" class="btn-sim">Sim, quero receber!</button>
+            <button onclick="nextQuestion('pergunta10')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 80%;"></div>
-        </div>
-        <h1>Não perca a chance de transformar sua vida ainda hoje, Você realmente quer essa mudança em sua vida?</h1>
-        <p>"Crede no Senhor vosso Deus, e estareis seguros; crede nos seus profetas, e prosperareis." (2 Crônicas 20:20)</p>
-        <button class="btn" onclick="nextPage('page10', '80%')">Sim, eu quero essa mudança!</button>
-    </div>
-</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta9'});</script>
+    </section>
 
-<!-- Página 10 -->
-<div class="page hidden" id="page10">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
+        <!-- Pergunta 10 -->
+    <section id="pergunta10" class="section hidden">
+        <div class="question">Você se compromete a ajudar a divulgar a palavra de Deus?</div>
+        <div class="options">
+            <button onclick="nextQuestion('pergunta11')" class="btn-sim">Sim, quero ajudar!</button>
+            <button onclick="nextQuestion('pergunta11')" class="btn-nao">Eu não preciso</button>
         </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 85%;"></div>
-        </div>
-        <h1>O manual “O Poder da Oração” somente é disponibilizado para pessoas realmente comprometidas para receber suas bênçãos, você se compromete?</h1>
-        <p>"Dai, e ser-vos-á dado; boa medida, recalcada, sacudida e transbordante vos deitarão no deleite." (Lucas 6:38)</p>
-        <button class="btn" onclick="nextPage('page11', '85%')">Sim, eu me comprometo!</button>
-    </div>
-</div>
+        <div class="bible-quote">"Dai, e ser-vos-á dado; boa medida, recalcada, sacudida e transbordante..." - Lucas 6:38</div>
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta10'});</script>
+    </section>
 
-<!-- Página 11 -->
-<div class="page hidden" id="page11">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 90%;"></div>
-        </div>
-        <h1>Você também acaba de ganhar totalmente grátis mais 2 Bônus, o "Guia de orações de 7 dias" e a "Oração Matinal Especial" como presente por ajudar a divulgar a palavra de DEUS!</h1>
-        <p>"E qualquer coisa que lhe pedimos, dele a receberemos, porque guardamos os seus mandamentos e fazemos o que é agradável à sua vista." (1 João 3:22)</p>
-        <button class="btn" onclick="nextPage('page12', '90%')">Sim, eu também quero MEUS Bônus!</button>
-    </div>
-</div>
+    <!-- Pergunta 11 -->
+    <section id="pergunta11" class="section hidden">
+        <div class="logo" style="margin-top: 350px; padding-top: 20px; text-align: center;">
+            </div>
+        <div class="question">Se <div class="question2">DEUS</div> tocar em seu coração, Doe qualquer valor, e ajude a levar a palavra de Deus para mais pessoas!</div>
+        <div class="bible-quote">""Deus ama a quem dá com alegria." (2 Coríntios 9:7)</div>
+        <div class="options">
+            <button onclick="finalStep4()" class="btn-sim">Doar R$ 10<div <br> </div> Envia a palavra de DEUS para +100 pessoas</button>
+            <button onclick="finalStep3()" class="btn-sim">Doar R$ 20<div <br> </div>Envia a palavra de DEUS para +200 pessoas</button>
+            <button onclick="finalStep2()" class="btn-sim">Doar R$ 50<div <br> </div>Envia a palavra de DEUS para +500 pessoas!</button>
+            <button onclick="finalStep1()" class="btn-sim">Doar R$ 100<div <br> </div>Envia a palavra de DEUS para +1.000 pessoas!</button> 
+            <button onclick="finalStep5()" class="btn-nao">Não, EU não quero ajudar a divulgar a palavra de DEUS</button>
+            </div>        
+                <!-- Pixel Facebook -->
+        <script>fbq('track', 'PageView', {content_name: 'Pergunta11'});</script>
+    </section>
+  
 
-<!-- Página 12 -->
-<div class="page hidden" id="page12">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 95%;"></div>
-        </div>
-        <h1>Você quer experimentar as bênçãos e mudanças que essa oração de 1 minuto vai trazer a sua vida?</h1>
-        <p>"O Senhor é meu pastor, nada me faltará." (Salmo 23:1)</p>
-        <button class="btn" onclick="nextPage('page13', '95%')">Sim, eu quero receber essas bençãos!</button>
-    </div>
-</div>
-
-<!-- Página 13 -->
-<div class="page hidden" id="page13">
-    <div class="container">
-        <div class="logo">
-            <img src="logo.png" alt="Poder da Oração">
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 97%;"></div>
-        </div>
-        <h1>Poderosos querem tirar o site do ar, Você quer garantir toda transformação ainda hoje, antes que esse site saia do ar?</h1>
-        <p>"Crede no Senhor vosso Deus, e estareis seguros; crede nos seus profetas, e prosperareis." (2 Crônicas 20:20)</p>
-        <button class="btn" onclick="nextPage('page14', '97%')">Sim, eu quero começar agora mesmo!</button>
-    </div>
-</div>
-
-<!-- Página 14 - final - Compromisso com Oração -->
-<div class="page hidden" id="page14">
-    <div class="container">
-        <div class="logo" style="margin-top: 200px; padding-top: 20px; text-align: center;">
-            <img src="logo.png" alt="Poder da Oração" style="max-width: 100%; height: auto;">
-        </div>
-        <div class="progress-bar">
-            <div class="progress" style="width: 100%;"></div>
-        </div>
-        <h1>Ajude a espalhar a palavra de Deus pela terra, e receba agora em seu e-mail a Oração de 1 minuto, o manual “O Poder da Oração” e seus bônus.</h1><h2>Sua doação vai espalhar esta oração e abençoar milhares de pessoas. Faça parte dessa missão!</h2>
-        <p>"Deus ama a quem dá com alegria." (2 Coríntios 9:7)</p>
-        <h2>ROLE PARA BAIXO PARA OUTROS VALORES!</h2>
-
-        <a href="https://pay.kiwify.com.br/CsdUJiL" class="btn">Doar R$ 100 - Envia a palavra de DEUS para +1.000 pessoas</a>
-        
-        <a href="https://pay.kiwify.com.br/DfQuX2m" class="btn">Doar R$ 50 - Envia a palavra de DEUS para +500 pessoas</a>
-        
-        <a href="https://pay.kiwify.com.br/s2lXf8o" class="btn">Doar R$ 20 - Envia a palavra de DEUS para +200 pessoas</a>
-        
-        <a href="https://pay.kiwify.com.br/v0sZA2s" class="btn">Doar R$ 10 - Envia a palavra de DEUS para +100 pessoas</a>
-        
-        <a href="https://pay.kiwify.com.br/v0sZA2s" class="btn2">Não, EU não quero ajudar a divulgar a palavra de DEUS</a>
-    </div>
-</div>
-    <script>
-    let prefix = ["https://pay.kiwify.com.br"];
-
-function getParams() {
-    let t = "",
-        e = window.top.location.href,
-        r = new URL(e);
-    if (null != r) {
-        let a = r.searchParams.get("utm_source"),
-            n = r.searchParams.get("utm_medium"),
-            o = r.searchParams.get("utm_campaign"),
-            m = r.searchParams.get("utm_term"),
-            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+<script>
+    function nextQuestion(nextSectionId) {
+        document.querySelector('.section:not(.hidden)').classList.add('hidden');
+        document.getElementById(nextSectionId).classList.remove('hidden');
     }
-    return t
-}! function() {
-    var t = new URLSearchParams(window.location.search);
-    t.toString() && document.querySelectorAll("a").forEach(function(e) {
-        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-    })
-}(); </script>
+
+    function getUTMParameters() {
+        let queryString = window.location.search;
+        if (queryString) {
+            return queryString;
+        }
+        return '';
+    }
+
+    function finalStep1() {
+        let utmParams = getUTMParameters();
+        let destinationUrl = "https://pay.kiwify.com.br/CsdUJiL";
+        if (utmParams) {
+            destinationUrl += utmParams;
+        }
+        window.location.href = destinationUrl;
+    }
+</script>
+
+<script>
+    function nextQuestion(nextSectionId) {
+        document.querySelector('.section:not(.hidden)').classList.add('hidden');
+        document.getElementById(nextSectionId).classList.remove('hidden');
+    }
+
+    function getUTMParameters() {
+        let queryString = window.location.search;
+        if (queryString) {
+            return queryString;
+        }
+        return '';
+    }
+
+    function finalStep2() {
+        let utmParams = getUTMParameters();
+        let destinationUrl = "https://pay.kiwify.com.br/DfQuX2m";
+        if (utmParams) {
+            destinationUrl += utmParams;
+        }
+        window.location.href = destinationUrl;
+    }
+</script>
+
+<script>
+    function nextQuestion(nextSectionId) {
+        document.querySelector('.section:not(.hidden)').classList.add('hidden');
+        document.getElementById(nextSectionId).classList.remove('hidden');
+    }
+
+    function getUTMParameters() {
+        let queryString = window.location.search;
+        if (queryString) {
+            return queryString;
+        }
+        return '';
+    }
+
+    function finalStep3() {
+        let utmParams = getUTMParameters();
+        let destinationUrl = "https://pay.kiwify.com.br/s2lXf8o";
+        if (utmParams) {
+            destinationUrl += utmParams;
+        }
+        window.location.href = destinationUrl;
+    }
+</script>
+
+<script>
+    function nextQuestion(nextSectionId) {
+        document.querySelector('.section:not(.hidden)').classList.add('hidden');
+        document.getElementById(nextSectionId).classList.remove('hidden');
+    }
+
+    function getUTMParameters() {
+        let queryString = window.location.search;
+        if (queryString) {
+            return queryString;
+        }
+        return '';
+    }
+
+    function finalStep4() {
+        let utmParams = getUTMParameters();
+        let destinationUrl = "https://pay.kiwify.com.br/v0sZA2s";
+        if (utmParams) {
+            destinationUrl += utmParams;
+        }
+        window.location.href = destinationUrl;
+    }
+</script>
+
+<script>
+    function nextQuestion(nextSectionId) {
+        document.querySelector('.section:not(.hidden)').classList.add('hidden');
+        document.getElementById(nextSectionId).classList.remove('hidden');
+    }
+
+    function getUTMParameters() {
+        let queryString = window.location.search;
+        if (queryString) {
+            return queryString;
+        }
+        return '';
+    }
+
+    function finalStep5() {
+        let utmParams = getUTMParameters();
+        let destinationUrl = "https://pay.kiwify.com.br/v0sZA2s";
+        if (utmParams) {
+            destinationUrl += utmParams;
+        }
+        window.location.href = destinationUrl;
+    }
+</script>
+
 </body>
 </html>
